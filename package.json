@@ -12,12 +12,29 @@
     "typecheck": "pnpm --filter \"./packages/**\" -r typecheck",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "dev:vue": "pnpm --filter playground-vue dev",
+    "dev:react": "pnpm --filter playground-react dev",
+    "dev:angular": "pnpm --filter playground-angular dev",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "@eslint/js": "^10.0.1",
     "@types/node": "^24.19.2",
+    "angular-eslint": "^22.6.0",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-vue": "^10.12.1",
+    "globals": "^17.14.0",
+    "prettier": "^3.9.10",
     "tsdown": "^0.23.7",
     "typescript": "6.0.3",
-    "vitest": "^5.1.0"
+    "typescript-eslint": "^8.72.2",
+    "vitest": "^5.1.0",
+    "vue-eslint-parser": "^10.4.2"
   }
 }

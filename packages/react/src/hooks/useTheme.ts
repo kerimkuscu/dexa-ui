@@ -1,27 +1,16 @@
-import { useCallback, useEffect, useState } from 'react'
-import { applyTheme, getTheme, type ThemeName } from '@dexa-ui/core'
+import { useCallback, useSyncExternalStore } from 'react'
+import { applyTheme, getTheme, onThemeChange, type ThemeName } from '@dexa-ui/core'
 
-const listeners = new Set<(theme: ThemeName) => void>()
+const subscribe = (onChange: () => void) => onThemeChange(onChange)
+const getSnapshot = (): ThemeName => getTheme() ?? 'light'
+const getServerSnapshot = (): ThemeName => 'light'
 
 /**
- * Reads and sets the theme on `<html data-theme>`. Every component using the
- * hook re-renders on change. SSR-safe: the attribute is read after mount.
+ * Reads and sets the theme on `<html data-theme>`. Stays in sync even when
+ * the attribute is changed outside React. SSR-safe.
  */
 export function useTheme() {
-  const [theme, setState] = useState<ThemeName>('light')
-
-  useEffect(() => {
-    setState(getTheme() ?? 'light')
-    listeners.add(setState)
-    return () => {
-      listeners.delete(setState)
-    }
-  }, [])
-
-  const setTheme = useCallback((next: ThemeName) => {
-    applyTheme(next)
-    listeners.forEach((listener) => listener(next))
-  }, [])
-
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
+  const setTheme = useCallback((next: ThemeName) => applyTheme(next), [])
   return { theme, setTheme }
 }

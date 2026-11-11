@@ -29,3 +29,18 @@ export function onSystemSchemeChange(listener: (dark: boolean) => void): () => v
   query.addEventListener('change', handler)
   return () => query.removeEventListener('change', handler)
 }
+
+/**
+ * Calls `listener` whenever `data-theme` on `target` (default: `<html>`)
+ * changes, no matter who changed it. Returns an unsubscribe function.
+ */
+export function onThemeChange(
+  listener: (theme: ThemeName | null) => void,
+  target?: HTMLElement,
+): () => void {
+  if (!isClient || typeof MutationObserver === 'undefined') return () => {}
+  const element = target ?? document.documentElement
+  const observer = new MutationObserver(() => listener(element.getAttribute(THEME_ATTRIBUTE)))
+  observer.observe(element, { attributes: true, attributeFilter: [THEME_ATTRIBUTE] })
+  return () => observer.disconnect()
+}

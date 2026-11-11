@@ -6,8 +6,5 @@ import { useConfig } from '../config/context'
 /** Current locale, text direction and a translate function (falls back to English). */
 export function useLocale() {
   const { locale } = useConfig()
-  return useMemo(
-    () => ({ locale, dir: locale.dir, t: createTranslator(locale, en) }),
-    [locale],
-  )
+  return useMemo(() => ({ locale, dir: locale.dir, t: createTranslator(locale, en) }), [locale])
 }

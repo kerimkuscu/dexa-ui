@@ -1,0 +1,21 @@
+{
+  "name": "playground-vue",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.10",
+    "vite": "^8.3.7"
+  },
+  "dependencies": {
+    "@dexa-ui/core": "workspace:*",
+    "@dexa-ui/css": "workspace:*",
+    "@dexa-ui/locales": "workspace:*",
+    "@dexa-ui/tokens": "workspace:*",
+    "@dexa-ui/vue": "workspace:*",
+    "vue": "^3.5.45"
+  }
+}

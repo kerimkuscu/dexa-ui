@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "out-tsc/app",
+    "types": []
+  },
+  "include": [
+    "src/**/*.ts",
+    "../shared/*.ts",
+    "../../packages/angular/src/**/*.ts",
+    "../../packages/core/src/**/*.ts",
+    "../../packages/locales/src/**/*.ts",
+    "../../packages/tokens/src/**/*.ts"
+  ],
+  "exclude": ["../shared/aliases.ts", "../../packages/**/*.spec.ts"]
+}

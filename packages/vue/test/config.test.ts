@@ -53,10 +53,13 @@ describe('config', () => {
       seen.push(useZIndex().next())
       return () => null
     })
-    mount(() => [
-      h(DxConfigProvider, null, () => [h(Overlay), h(Overlay)]),
-      h(DxConfigProvider, { zIndex: 5000 }, () => h(Overlay)),
-    ], { global: { plugins: [createDexa({ zIndex: 100 })] } })
+    mount(
+      () => [
+        h(DxConfigProvider, null, () => [h(Overlay), h(Overlay)]),
+        h(DxConfigProvider, { zIndex: 5000 }, () => h(Overlay)),
+      ],
+      { global: { plugins: [createDexa({ zIndex: 100 })] } },
+    )
     expect(seen).toEqual([101, 102, 5001])
   })
 })

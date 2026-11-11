@@ -1,0 +1,57 @@
+/* Layout for the playgrounds only (not part of the library). */
+.pg {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: var(--dx-space-8) var(--dx-space-4);
+  display: grid;
+  gap: var(--dx-space-8);
+}
+.pg-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dx-space-3);
+  align-items: center;
+}
+.pg-bar h1 {
+  font-size: var(--dx-font-size-xl);
+  margin-inline-end: auto;
+}
+.pg select {
+  height: var(--dx-control-height-md);
+  padding-inline: var(--dx-control-padding-x-md);
+  font-size: var(--dx-control-font-size-md);
+  border: var(--dx-border-width) solid var(--dx-border-strong);
+  border-radius: var(--dx-radius-md);
+  background: var(--dx-bg-surface);
+}
+.pg-section {
+  display: grid;
+  gap: var(--dx-space-3);
+}
+.pg-section h2 {
+  font-size: var(--dx-font-size-sm);
+  color: var(--dx-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.pg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: var(--dx-space-3);
+}
+.pg-swatch {
+  display: grid;
+  border: var(--dx-border-width) solid var(--dx-border);
+  border-radius: var(--dx-radius-lg);
+  overflow: hidden;
+  font-size: var(--dx-font-size-sm);
+}
+.pg-swatch > div {
+  padding: var(--dx-space-2) var(--dx-space-3);
+}
+.pg-surfaces > div {
+  padding: var(--dx-space-4);
+  border: var(--dx-border-width) solid var(--dx-border);
+  border-radius: var(--dx-radius-lg);
+  box-shadow: var(--dx-shadow-md);
+}

@@ -42,8 +42,7 @@ export function themeDeclarations(theme: Theme): [string, string][] {
     d.push([cssVar('color', intent, 'shade'), shadeFor(contrast)])
     d.push([
       cssVar('color', intent, 'text'),
-      text ??
-        `color-mix(in oklab, ${solid} ${pct(deriveWeights.text)}, var(${cssVar('text')}))`,
+      text ?? `color-mix(in oklab, ${solid} ${pct(deriveWeights.text)}, var(${cssVar('text')}))`,
     ])
   }
   d.push(

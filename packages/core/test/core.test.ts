@@ -37,7 +37,11 @@ describe('cx', () => {
 })
 
 describe('i18n', () => {
-  const en: Locale = { name: 'en', dir: 'ltr', messages: { common: { hi: 'Hi {name}', only: 'EN' } } }
+  const en: Locale = {
+    name: 'en',
+    dir: 'ltr',
+    messages: { common: { hi: 'Hi {name}', only: 'EN' } },
+  }
   const tr: Locale = { name: 'tr', dir: 'ltr', messages: { common: { hi: 'Merhaba {name}' } } }
 
   it('interpolates params and keeps unknown placeholders', () => {

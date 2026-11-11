@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "paths": {
+      "@dexa-ui/angular": ["../../packages/angular/src/public-api.ts"],
+      "@dexa-ui/core": ["../../packages/core/src/index.ts"],
+      "@dexa-ui/locales": ["../../packages/locales/src/index.ts"],
+      "@dexa-ui/tokens": ["../../packages/tokens/src/index.ts"]
+    }
+  },
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+  "files": [],
+  "references": [{ "path": "./tsconfig.app.json" }]
+}

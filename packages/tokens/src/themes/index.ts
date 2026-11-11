@@ -22,10 +22,4 @@ export const themes: readonly Theme[] = [
 ]
 
 export type BuiltInThemeName =
-  | 'light'
-  | 'dark'
-  | 'nord'
-  | 'dracula'
-  | 'monokai'
-  | 'solarized-light'
-  | 'solarized-dark'
+  'light' | 'dark' | 'nord' | 'dracula' | 'monokai' | 'solarized-light' | 'solarized-dark'
