@@ -1,5 +1,5 @@
 // Bundles and minifies the stylesheets with Lightning CSS.
-import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join, relative, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import browserslist from 'browserslist'
@@ -34,6 +34,10 @@ await build(join(src, 'index.css'), join(dist, 'dexa-ui.min.css'), { minify: tru
 // Pieces for apps that compose their own bundle.
 await build(join(src, 'reboot.css'), join(dist, 'reboot.css'))
 await build(join(src, 'components.css'), join(dist, 'components.css'))
-for (const file of readdirSync(join(src, 'components')).filter((f) => f.endsWith('.css'))) {
-  await build(join(src, 'components', file), join(dist, 'components', file))
+const componentsDir = join(src, 'components')
+const componentFiles = existsSync(componentsDir)
+  ? readdirSync(componentsDir).filter((f) => f.endsWith('.css'))
+  : []
+for (const file of componentFiles) {
+  await build(join(componentsDir, file), join(dist, 'components', file))
 }

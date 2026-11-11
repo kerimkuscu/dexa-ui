@@ -52,7 +52,7 @@ import '@dexa-ui/css'
 // Angular
 import { provideDexa } from '@dexa-ui/angular'
 bootstrapApplication(App, { providers: [provideDexa({ locale: tr })] })
-// angular.json → "styles": ["@dexa-ui/css"]
+// angular.json → "styles": ["node_modules/@dexa-ui/css/dist/dexa-ui.css"]
 ```
 
 ## Development
