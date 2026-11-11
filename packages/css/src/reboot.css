@@ -1,0 +1,96 @@
+/*
+ * dexa-ui reboot: a small, opinionated base. Every rule is wrapped in :where()
+ * so it has zero specificity and any app style overrides it.
+ */
+
+:where(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+
+:where(html) {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+:where(body) {
+  margin: 0;
+  font-family: var(--dx-font-sans);
+  font-size: var(--dx-font-size-md);
+  line-height: var(--dx-line-height-normal);
+  color: var(--dx-text);
+  background-color: var(--dx-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, blockquote, figure, pre, dl, dd) {
+  margin: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font-weight: var(--dx-font-weight-semibold);
+  line-height: var(--dx-line-height-tight);
+}
+
+:where(a) {
+  color: var(--dx-color-primary-text);
+  text-underline-offset: 0.2em;
+}
+
+:where(code, kbd, samp, pre) {
+  font-family: var(--dx-font-mono);
+  font-size: 0.9em;
+}
+
+:where(img, svg, video, canvas, picture) {
+  display: block;
+  max-width: 100%;
+}
+
+:where(img, video) {
+  height: auto;
+}
+
+:where(button, input, select, textarea) {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+:where(button, [role='button']) {
+  cursor: pointer;
+}
+
+:where(:disabled) {
+  cursor: not-allowed;
+}
+
+:where(table) {
+  border-collapse: collapse;
+}
+
+:where(hr) {
+  height: 0;
+  margin: var(--dx-space-4) 0;
+  border: 0;
+  border-block-start: var(--dx-border-width) solid var(--dx-border);
+}
+
+:where(:focus-visible) {
+  outline: none;
+  box-shadow: var(--dx-focus-ring);
+}
+
+:where([hidden]) {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(*, *::before, *::after) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

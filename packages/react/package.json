@@ -1,0 +1,48 @@
+{
+  "name": "@dexa-ui/react",
+  "version": "0.0.0",
+  "description": "dexa-ui components for React.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "@dexa-ui/core": "workspace:*",
+    "@dexa-ui/css": "workspace:*",
+    "@dexa-ui/locales": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerimkuscu/dexa-ui.git",
+    "directory": "packages/react"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "happy-dom": "^21.0.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}

@@ -1,0 +1,8 @@
+export { DxConfigProvider, type DxConfigProviderProps } from './config/ConfigProvider'
+export { DexaContext, useConfig, useDexaContext, type DexaContextValue } from './config/context'
+export { useLocale } from './hooks/useLocale'
+export { useSize } from './hooks/useSize'
+export { useTheme } from './hooks/useTheme'
+export { useZIndex } from './hooks/useZIndex'
+export { createNamespace } from '@dexa-ui/core'
+export type { DexaConfig, DexaConfigInput, Locale, Size, ThemeName } from '@dexa-ui/core'

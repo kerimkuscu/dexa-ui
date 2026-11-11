@@ -1,0 +1,50 @@
+{
+  "name": "@dexa-ui/css",
+  "version": "0.0.0",
+  "description": "dexa-ui stylesheets: works with Vue, React, Angular or plain HTML.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": "./dist/dexa-ui.css",
+    "./min": "./dist/dexa-ui.min.css",
+    "./dexa-ui.css": "./dist/dexa-ui.css",
+    "./dexa-ui.min.css": "./dist/dexa-ui.min.css",
+    "./reboot.css": "./dist/reboot.css",
+    "./components.css": "./dist/components.css",
+    "./components/*.css": "./dist/components/*.css",
+    "./package.json": "./package.json"
+  },
+  "style": "./dist/dexa-ui.css",
+  "files": [
+    "dist"
+  ],
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Edge versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 iOS versions"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@dexa-ui/tokens": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerimkuscu/dexa-ui.git",
+    "directory": "packages/css"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "browserslist": "^4.29.5",
+    "lightningcss": "^1.33.0"
+  }
+}

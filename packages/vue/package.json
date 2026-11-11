@@ -1,0 +1,47 @@
+{
+  "name": "@dexa-ui/vue",
+  "version": "0.0.0",
+  "description": "dexa-ui components for Vue 3.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && vue-tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "dependencies": {
+    "@dexa-ui/core": "workspace:*",
+    "@dexa-ui/css": "workspace:*",
+    "@dexa-ui/locales": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerimkuscu/dexa-ui.git",
+    "directory": "packages/vue"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/test-utils": "^2.5.1",
+    "happy-dom": "^21.0.4",
+    "vite": "^8.3.7",
+    "vue": "^3.5.45",
+    "vue-tsc": "^3.3.14"
+  }
+}
