@@ -1,0 +1,5 @@
+export { DxConfigProvider } from './config/config-provider'
+export { DEXA_CONFIG, DxConfigService, provideDexa } from './config/config.service'
+export { DxThemeService } from './theme/theme.service'
+export { createNamespace } from '@dexa-ui/core'
+export type { DexaConfig, DexaConfigInput, Locale, Size, ThemeName } from '@dexa-ui/core'

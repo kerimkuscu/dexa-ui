@@ -1,0 +1,45 @@
+{
+  "name": "@dexa-ui/angular",
+  "version": "0.0.0",
+  "description": "dexa-ui components for Angular.",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "build": "ng build",
+    "test": "ng test --watch=false",
+    "typecheck": "tsc -p tsconfig.lib.json --noEmit"
+  },
+  "peerDependencies": {
+    "@angular/common": "^21.0.0 || ^22.0.0",
+    "@angular/core": "^21.0.0 || ^22.0.0"
+  },
+  "dependencies": {
+    "@dexa-ui/core": "workspace:*",
+    "@dexa-ui/css": "workspace:*",
+    "@dexa-ui/locales": "workspace:*",
+    "tslib": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerimkuscu/dexa-ui.git",
+    "directory": "packages/angular"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
+  "devDependencies": {
+    "@angular/build": "^22.2.6",
+    "@angular/cli": "^22.2.6",
+    "@angular/common": "^22.2.5",
+    "@angular/compiler": "^22.2.5",
+    "@angular/compiler-cli": "^22.2.5",
+    "@angular/core": "^22.2.5",
+    "@angular/platform-browser": "^22.2.5",
+    "jsdom": "^31.0.0",
+    "ng-packagr": "^22.2.6",
+    "rxjs": "~7.8.2",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.0"
+  }
+}
