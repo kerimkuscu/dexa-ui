@@ -1,0 +1,23 @@
+{
+  "name": "dexa-ui-monorepo",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.18.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "pnpm --filter \"./packages/**\" -r build",
+    "test": "pnpm --filter \"./packages/**\" -r test",
+    "typecheck": "pnpm --filter \"./packages/**\" -r typecheck",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "tsdown": "^0.23.7",
+    "typescript": "6.0.3",
+    "vitest": "^5.1.0"
+  }
+}

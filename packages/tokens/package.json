@@ -1,0 +1,36 @@
+{
+  "name": "@dexa-ui/tokens",
+  "version": "0.0.0",
+  "description": "Design tokens and themes for dexa-ui (CSS custom properties + TypeScript).",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./tokens.css": "./dist/css/tokens.css",
+    "./base.css": "./dist/css/base.css",
+    "./themes/*.css": "./dist/css/themes/*.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown && node scripts/build-css.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerimkuscu/dexa-ui.git",
+    "directory": "packages/tokens"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
