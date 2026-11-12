@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@a
 import { DxConfigProvider, DxThemeService } from '@dexa-ui/angular'
 import { en, tr } from '@dexa-ui/locales'
 import { intents, surfaces, swatchStyles, themeOptions } from '../../../shared/demo'
+import { Buttons } from './buttons'
 import { Messages } from './messages'
 
 @Component({
   selector: 'pg-root',
-  imports: [DxConfigProvider, Messages],
+  imports: [Buttons, DxConfigProvider, Messages],
   template: `
     <dx-config-provider [locale]="locale()">
       <main class="pg">
@@ -24,6 +25,8 @@ import { Messages } from './messages'
         </header>
 
         <pg-messages />
+
+        <pg-buttons />
 
         <section class="pg-section">
           <h2>Intents</h2>

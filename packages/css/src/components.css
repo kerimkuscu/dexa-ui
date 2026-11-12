@@ -1,1 +1,2 @@
 /* Every component stylesheet. Each file is also published on its own (dist/components/). */
+@import './components/button.css';

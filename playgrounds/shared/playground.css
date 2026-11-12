@@ -55,3 +55,9 @@
   border-radius: var(--dx-radius-lg);
   box-shadow: var(--dx-shadow-md);
 }
+.pg-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dx-space-2);
+  align-items: center;
+}

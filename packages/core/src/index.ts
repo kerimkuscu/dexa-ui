@@ -1,4 +1,5 @@
 export * from './bem'
+export * from './button'
 export * from './config'
 export * from './dom'
 export * from './i18n'

@@ -22,3 +22,6 @@ export const surfaces = [
   { name: 'elevated', style: { background: 'var(--dx-bg-elevated)' } },
   { name: 'muted', style: { background: 'var(--dx-bg-muted)' } },
 ]
+
+export const buttonVariants = ['solid', 'soft', 'outline', 'ghost'] as const
+export const sizes = ['sm', 'md', 'lg'] as const

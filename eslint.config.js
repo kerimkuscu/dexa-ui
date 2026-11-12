@@ -57,7 +57,8 @@ export default tseslint.config(
     rules: {
       '@angular-eslint/component-selector': [
         'error',
-        { type: 'element', prefix: ['dx', 'pg'], style: 'kebab-case' },
+        // Elements (`<dx-button-group>`) and native-element components (`<button dx-button>`).
+        { type: ['element', 'attribute'], prefix: ['dx', 'pg'], style: 'kebab-case' },
       ],
       '@angular-eslint/directive-selector': [
         'error',

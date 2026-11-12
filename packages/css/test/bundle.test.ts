@@ -17,4 +17,11 @@ describe('css bundle', () => {
     expect(css).toContain(':where(body)')
     expect(css).not.toContain('@import')
   })
+
+  it('includes the component stylesheets, also as separate files', () => {
+    const css = readFileSync(join(dist, 'dexa-ui.css'), 'utf8')
+    expect(css).toContain('.dx-button')
+    expect(css).toContain('.dx-button-group')
+    expect(existsSync(join(dist, 'components', 'button.css'))).toBe(true)
+  })
 })
