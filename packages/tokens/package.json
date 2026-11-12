@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Design tokens and themes for dexa-ui (CSS custom properties + TypeScript).",
   "license": "MIT",
+  "author": "DEXA Studio",
   "type": "module",
   "sideEffects": [
     "*.css"

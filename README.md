@@ -72,4 +72,4 @@ playgrounds use the package sources directly, so edits show up instantly.
 
 ## License
 
-MIT
+[MIT](LICENSE) © DEXA Studio

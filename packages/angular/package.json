@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "dexa-ui components for Angular.",
   "license": "MIT",
+  "author": "DEXA Studio",
   "sideEffects": false,
   "scripts": {
     "build": "ng build",

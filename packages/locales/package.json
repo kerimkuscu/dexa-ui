@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "UI translations for dexa-ui (English default, Turkish and more).",
   "license": "MIT",
+  "author": "DEXA Studio",
   "type": "module",
   "sideEffects": false,
   "exports": {
