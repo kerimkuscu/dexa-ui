@@ -1,0 +1,53 @@
+/*
+ * Icon: an inline <svg> sized and colored like the text around it.
+ * `size` / `color` on the component set font-size / color on the element.
+ */
+.dx-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  /* Sits on the text baseline like a glyph. */
+  vertical-align: -0.125em;
+  fill: currentColor;
+  overflow: visible;
+}
+
+/*
+ * Arrows and chevrons that point along the reading direction are mirrored
+ * under dir="rtl". The nearest dir attribute sets --_dx-dir (it inherits, so
+ * nesting works); :dir() would be rewritten by CSS tooling into a :lang() list.
+ */
+:where([dir='rtl']) {
+  --_dx-dir: -1;
+}
+
+:where([dir='ltr']) {
+  --_dx-dir: 1;
+}
+
+.dx-icon--rtl {
+  scale: var(--_dx-dir, 1) 1;
+}
+
+.dx-icon--spin {
+  animation: dx-icon-spin 0.9s linear infinite;
+}
+
+@keyframes dx-icon-spin {
+  to {
+    rotate: 1turn;
+  }
+}
+
+/*
+ * A spinner still has to show that something is happening: with reduced
+ * motion it turns slower instead of stopping (the reboot stops every other
+ * animation, hence !important).
+ */
+@media (prefers-reduced-motion: reduce) {
+  .dx-icon--spin {
+    animation-duration: 2.4s !important;
+    animation-iteration-count: infinite !important;
+  }
+}

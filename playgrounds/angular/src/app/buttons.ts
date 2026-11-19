@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core'
-import { DxButton, DxButtonGroup } from '@dexa-ui/angular'
+import { DxButton, DxButtonGroup, DxIcon } from '@dexa-ui/angular'
+import { iconCheck, iconPlus } from '@dexa-ui/icons'
 import { buttonVariants, intents, sizes } from '../../../shared/demo'
 
 @Component({
   selector: 'pg-buttons',
-  imports: [DxButton, DxButtonGroup],
+  imports: [DxButton, DxButtonGroup, DxIcon],
   template: `
     <section class="pg-section">
       <h2>Buttons</h2>
@@ -20,9 +21,9 @@ import { buttonVariants, intents, sizes } from '../../../shared/demo'
           <button dx-button [size]="size">Size {{ size }}</button>
         }
         <button dx-button pill>Pill</button>
-        <button dx-button iconOnly aria-label="Add">+</button>
+        <button dx-button iconOnly aria-label="Add"><svg dx-icon [icon]="plus"></svg></button>
         <button dx-button [loading]="loading()" (click)="save()">
-          <span dx-start>★</span>Save
+          <svg dx-icon dx-start [icon]="check"></svg>Save
         </button>
         <button dx-button disabled>Disabled</button>
         <a dx-button href="#" variant="outline" intent="secondary">Link</a>
@@ -53,6 +54,8 @@ import { buttonVariants, intents, sizes } from '../../../shared/demo'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Buttons {
+  protected readonly plus = iconPlus
+  protected readonly check = iconCheck
   protected readonly variants = buttonVariants
   protected readonly intents = intents
   protected readonly sizes = sizes

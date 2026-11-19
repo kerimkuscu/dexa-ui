@@ -13,6 +13,7 @@ set of styles, native components in each framework.
 | `@dexa-ui/react`   | React components (React 18+)                              |
 | `@dexa-ui/angular` | Angular components (Angular 21+)                          |
 | `@dexa-ui/css`     | All styles; also works in plain HTML                      |
+| `@dexa-ui/icons`   | The icon set: solid SVG icons as data, plus SVG files     |
 | `@dexa-ui/tokens`  | Design tokens and themes as CSS custom properties         |
 | `@dexa-ui/core`    | Framework-agnostic logic shared by the framework packages |
 | `@dexa-ui/locales` | UI translations (English default, Turkish, more to come)  |
@@ -69,6 +70,11 @@ pnpm dev:vue        # playground (also dev:react, dev:angular)
 
 Run `pnpm build` once before starting a playground; after that the
 playgrounds use the package sources directly, so edits show up instantly.
+
+Icons are drawn in code: `packages/icons/scripts/drawings.mjs` describes each
+one on a 24 × 24 grid and `pnpm --filter @dexa-ui/icons draw` turns them into
+single filled paths (`src/icons.ts`, `svg/`). The tests fail if the generated
+files are out of date.
 
 ## License
 

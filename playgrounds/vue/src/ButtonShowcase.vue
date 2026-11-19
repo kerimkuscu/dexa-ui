@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { DxButton, DxButtonGroup } from '@dexa-ui/vue'
+import { DxButton, DxButtonGroup, DxIcon } from '@dexa-ui/vue'
+import { iconCheck, iconPlus } from '@dexa-ui/icons'
 import { buttonVariants, intents, sizes } from '../../shared/demo'
 
 const loading = ref(false)
@@ -21,9 +22,9 @@ function save() {
     <div class="pg-row">
       <DxButton v-for="size in sizes" :key="size" :size="size">Size {{ size }}</DxButton>
       <DxButton pill>Pill</DxButton>
-      <DxButton icon-only aria-label="Add">+</DxButton>
+      <DxButton icon-only aria-label="Add"><DxIcon :icon="iconPlus" /></DxButton>
       <DxButton :loading="loading" @click="save">
-        <template #start>★</template>
+        <template #start><DxIcon :icon="iconCheck" /></template>
         Save
       </DxButton>
       <DxButton disabled>Disabled</DxButton>

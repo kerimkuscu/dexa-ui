@@ -4,5 +4,10 @@
   "lib": {
     "entryFile": "src/public-api.ts"
   },
-  "allowedNonPeerDependencies": ["@dexa-ui/core", "@dexa-ui/css", "@dexa-ui/locales"]
+  "allowedNonPeerDependencies": [
+    "@dexa-ui/core",
+    "@dexa-ui/css",
+    "@dexa-ui/icons",
+    "@dexa-ui/locales"
+  ]
 }

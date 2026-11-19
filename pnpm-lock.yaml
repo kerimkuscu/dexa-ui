@@ -220,6 +220,9 @@ importers:
       '@dexa-ui/css':
         specifier: workspace:*
         version: link:../css
+      '@dexa-ui/icons':
+        specifier: workspace:*
+        version: link:../icons
       '@dexa-ui/locales':
         specifier: workspace:*
         version: link:../locales
@@ -284,6 +287,12 @@ importers:
         specifier: ^1.33.0
         version: 1.33.0
 
+  packages/icons:
+    devDependencies:
+      paper:
+        specifier: 0.12.18
+        version: 0.12.18
+
   packages/locales:
     dependencies:
       '@dexa-ui/core':
@@ -298,6 +307,9 @@ importers:
       '@dexa-ui/css':
         specifier: workspace:*
         version: link:../css
+      '@dexa-ui/icons':
+        specifier: workspace:*
+        version: link:../icons
       '@dexa-ui/locales':
         specifier: workspace:*
         version: link:../locales
@@ -331,6 +343,9 @@ importers:
       '@dexa-ui/css':
         specifier: workspace:*
         version: link:../css
+      '@dexa-ui/icons':
+        specifier: workspace:*
+        version: link:../icons
       '@dexa-ui/locales':
         specifier: workspace:*
         version: link:../locales
@@ -377,6 +392,9 @@ importers:
       '@dexa-ui/css':
         specifier: workspace:*
         version: link:../../packages/css
+      '@dexa-ui/icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
       '@dexa-ui/locales':
         specifier: workspace:*
         version: link:../../packages/locales
@@ -411,6 +429,9 @@ importers:
       '@dexa-ui/css':
         specifier: workspace:*
         version: link:../../packages/css
+      '@dexa-ui/icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
       '@dexa-ui/locales':
         specifier: workspace:*
         version: link:../../packages/locales
@@ -448,6 +469,9 @@ importers:
       '@dexa-ui/css':
         specifier: workspace:*
         version: link:../../packages/css
+      '@dexa-ui/icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
       '@dexa-ui/locales':
         specifier: workspace:*
         version: link:../../packages/locales
@@ -3280,6 +3304,10 @@ packages:
 
   package-manager-detector@1.9.0:
     resolution: {integrity: sha512-zAMfbta9nPA8AKkA4WdmNAT8R8s6Dk0/xwPsqNnRidMFcLo1YkLuPDTgs2f64XdzS8vbLNnoJ+uUIkgbz7oRHA==}
+
+  paper@0.12.18:
+    resolution: {integrity: sha512-ZSLIEejQTJZuYHhSSqAf4jXOnii0kPhCJGAnYAANtdS72aNwXJ9cP95tZHgq1tnNpvEwgQhggy+4OarviqTCGw==}
+    engines: {node: '>=8.0.0'}
 
   parse-node-version@1.0.1:
     resolution: {integrity: sha512-3YHlOa/JgH6Mnpr05jP9eDG254US9ek25LyIxZlDItp2iJtwyaXQb57lBYLdT3MowkUFYEV2XXNAYIPlESvJlA==}
@@ -6950,6 +6978,8 @@ snapshots:
       p-limit: 3.1.0
 
   package-manager-detector@1.9.0: {}
+
+  paper@0.12.18: {}
 
   parse-node-version@1.0.1: {}
 

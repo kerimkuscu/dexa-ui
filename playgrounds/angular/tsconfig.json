@@ -6,6 +6,8 @@
     "paths": {
       "@dexa-ui/angular": ["../../packages/angular/src/public-api.ts"],
       "@dexa-ui/core": ["../../packages/core/src/index.ts"],
+      "@dexa-ui/icons": ["../../packages/icons/src/index.ts"],
+      "@dexa-ui/icons/all": ["../../packages/icons/src/all.ts"],
       "@dexa-ui/locales": ["../../packages/locales/src/index.ts"],
       "@dexa-ui/tokens": ["../../packages/tokens/src/index.ts"]
     }

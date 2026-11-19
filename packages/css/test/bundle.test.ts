@@ -22,6 +22,8 @@ describe('css bundle', () => {
     const css = readFileSync(join(dist, 'dexa-ui.css'), 'utf8')
     expect(css).toContain('.dx-button')
     expect(css).toContain('.dx-button-group')
+    expect(css).toContain('.dx-icon')
     expect(existsSync(join(dist, 'components', 'button.css'))).toBe(true)
+    expect(existsSync(join(dist, 'components', 'icon.css'))).toBe(true)
   })
 })

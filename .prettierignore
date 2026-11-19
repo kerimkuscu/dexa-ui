@@ -5,3 +5,8 @@ pnpm-lock.yaml
 out-tsc
 **/node_modules
 .changeset/*.md
+# Icon drawings are laid out as coordinate lists; the rest is generated from them.
+packages/icons/scripts/drawings.mjs
+packages/icons/src/icons.ts
+packages/icons/src/all.ts
+packages/icons/svg

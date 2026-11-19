@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { DxConfigProvider, useLocale, useTheme } from '@dexa-ui/react'
 import { en, tr } from '@dexa-ui/locales'
 import { Buttons } from './Buttons'
+import { Icons } from './Icons'
 import { intents, surfaces, swatchStyles, themeOptions } from '../../shared/demo'
 
 const keys = ['close', 'clear', 'confirm', 'cancel', 'loading', 'noData']
@@ -45,6 +46,7 @@ export function App() {
         <Messages />
 
         <Buttons />
+        <Icons />
 
         <section className="pg-section">
           <h2>Intents</h2>

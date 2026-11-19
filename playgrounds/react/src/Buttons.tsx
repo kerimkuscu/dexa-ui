@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { DxButton, DxButtonGroup } from '@dexa-ui/react'
+import { DxButton, DxButtonGroup, DxIcon } from '@dexa-ui/react'
+import { iconCheck, iconPlus } from '@dexa-ui/icons'
 import { buttonVariants, intents, sizes } from '../../shared/demo'
 
 export function Buttons() {
@@ -29,9 +30,9 @@ export function Buttons() {
         ))}
         <DxButton pill>Pill</DxButton>
         <DxButton iconOnly aria-label="Add">
-          +
+          <DxIcon icon={iconPlus} />
         </DxButton>
-        <DxButton loading={loading} onClick={save} start="★">
+        <DxButton loading={loading} onClick={save} start={<DxIcon icon={iconCheck} />}>
           Save
         </DxButton>
         <DxButton disabled>Disabled</DxButton>

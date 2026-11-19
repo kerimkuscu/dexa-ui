@@ -251,6 +251,14 @@
   border: 0;
 }
 
+/* Slower with reduced motion, but still moving: see icon.css. */
+@media (prefers-reduced-motion: reduce) {
+  .dx-button__spinner {
+    animation-duration: 2s !important;
+    animation-iteration-count: infinite !important;
+  }
+}
+
 @keyframes dx-button-spin {
   to {
     transform: rotate(1turn);

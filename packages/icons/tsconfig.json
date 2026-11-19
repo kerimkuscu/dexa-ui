@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    // The tests import the generator (plain JS) to check the generated files.
+    "allowJs": true
+  },
+  "include": ["src", "test", "*.config.ts"]
+}

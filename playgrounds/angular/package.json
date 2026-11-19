@@ -14,6 +14,7 @@
     "@dexa-ui/angular": "workspace:*",
     "@dexa-ui/core": "workspace:*",
     "@dexa-ui/css": "workspace:*",
+    "@dexa-ui/icons": "workspace:*",
     "@dexa-ui/locales": "workspace:*",
     "@dexa-ui/tokens": "workspace:*",
     "rxjs": "~7.8.2",

@@ -9,6 +9,7 @@
   "dependencies": {
     "@dexa-ui/core": "workspace:*",
     "@dexa-ui/css": "workspace:*",
+    "@dexa-ui/icons": "workspace:*",
     "@dexa-ui/locales": "workspace:*",
     "@dexa-ui/react": "workspace:*",
     "@dexa-ui/tokens": "workspace:*",

@@ -11,6 +11,8 @@ export function sourceAliases(framework: 'vue' | 'react') {
   return [
     { find: new RegExp(`^@dexa-ui/${framework}$`), replacement: pkg(`${framework}/src/index.ts`) },
     { find: /^@dexa-ui\/core$/, replacement: pkg('core/src/index.ts') },
+    { find: /^@dexa-ui\/icons$/, replacement: pkg('icons/src/index.ts') },
+    { find: /^@dexa-ui\/icons\/all$/, replacement: pkg('icons/src/all.ts') },
     { find: /^@dexa-ui\/locales$/, replacement: pkg('locales/src/index.ts') },
     { find: /^@dexa-ui\/tokens$/, replacement: pkg('tokens/src/index.ts') },
     { find: /^@dexa-ui\/css$/, replacement: pkg('css/src/index.css') },

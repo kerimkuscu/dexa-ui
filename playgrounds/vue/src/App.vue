@@ -4,6 +4,7 @@ import { DxConfigProvider, useTheme } from '@dexa-ui/vue'
 import { en, tr } from '@dexa-ui/locales'
 import { intents, surfaces, swatchStyles, themeOptions } from '../../shared/demo'
 import ButtonShowcase from './ButtonShowcase.vue'
+import IconShowcase from './IconShowcase.vue'
 import LocaleMessages from './LocaleMessages.vue'
 
 const { theme, setTheme } = useTheme()
@@ -32,6 +33,8 @@ const locale = computed(() => (lang.value === 'tr' ? tr : en))
       <LocaleMessages />
 
       <ButtonShowcase />
+
+      <IconShowcase />
 
       <section class="pg-section">
         <h2>Intents</h2>

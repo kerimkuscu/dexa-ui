@@ -1,0 +1,42 @@
+{
+  "name": "@dexa-ui/icons",
+  "version": "0.0.0",
+  "description": "The dexa-ui icon set: solid SVG icons as tree-shakable data, plus SVG files.",
+  "license": "MIT",
+  "author": "DEXA Studio",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./all": {
+      "types": "./dist/all.d.mts",
+      "import": "./dist/all.mjs"
+    },
+    "./svg/*.svg": "./svg/*.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "svg"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "draw": "node scripts/draw.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerimkuscu/dexa-ui.git",
+    "directory": "packages/icons"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "paper": "0.12.18"
+  }
+}

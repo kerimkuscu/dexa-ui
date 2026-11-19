@@ -1,5 +1,7 @@
 import { intents, themes } from '@dexa-ui/tokens'
 
+export { allIcons } from '@dexa-ui/icons/all'
+
 export const themeOptions = [
   ...themes.map((t) => ({ value: t.name, label: t.label })),
   { value: 'auto', label: 'Auto (OS)' },
@@ -25,3 +27,4 @@ export const surfaces = [
 
 export const buttonVariants = ['solid', 'soft', 'outline', 'ghost'] as const
 export const sizes = ['sm', 'md', 'lg'] as const
+export const iconSizes = [12, 16, 20, 24, 32] as const
